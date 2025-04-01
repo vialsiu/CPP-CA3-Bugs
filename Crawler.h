@@ -6,13 +6,15 @@
 struct Position {
     int x;
     int y;
+    Position(int x = 0, int y = 0) : x(x), y(y) {}
 };
 
 enum class Direction {
     North = 1,
-    East,
-    South,
-    West };
+    East = 2,
+    South = 3,
+    West = 4
+};
 
 class Crawler {
 private:
