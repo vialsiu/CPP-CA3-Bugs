@@ -1,16 +1,32 @@
-//
-// Created by fedan on 01/04/2025.
-//
-
 #ifndef CRAWLER_H
 #define CRAWLER_H
 
+#include <list>
 
-
-class Crawler {
-
+struct Position {
+    int x;
+    int y;
 };
 
+enum class Direction {
+    North = 1,
+    East,
+    South,
+    West };
 
+class Crawler {
+private:
+    int id;
+    Position position;
+    Direction direction;
+    int size;
+    bool alive;
+    std::list<Position> path;
 
-#endif //CRAWLER_H
+public:
+    Crawler(int id, int x, int y, Direction dir, int size);
+    void move();
+    bool isWayBlocked() const;
+};
+
+#endif
