@@ -3,4 +3,8 @@ project(BugsLife)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(BugsLife main.cpp)
+add_executable(BugsLife main.cpp
+        Crawler.cpp
+        Crawler.h
+        Board.cpp
+        Board.h)
