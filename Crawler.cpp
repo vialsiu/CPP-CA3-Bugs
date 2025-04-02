@@ -1,53 +1,52 @@
 #include "Crawler.h"
 
-Crawler::Crawler(int id, int x, int y, Direction dir, int size) {
-    this->id = id;
-    position.x = x;
-    position.y = y;
-    direction = dir;
-    this->size = size;
-    alive = true;
+Crawler::Crawler(int id, int x, int y, Direction dir, int size) : id(id), position(x, y), direction(dir), size(size), alive(true)
+{
     path.push_back(position);
 }
 
-void Crawler::move() {
+void Crawler::move()
+{
     if (!alive) return;
 
-    Position newCoord = position;
-    switch(direction) {
-        case Direction::North: newCoord.y--; break;
-        case Direction::East:  newCoord.x++; break;
-        case Direction::South: newCoord.y++; break;
-        case Direction::West:  newCoord.x--; break;
-    }
-
-    if (newCoord.x >= 0 &&
-        newCoord.x < 10 &&
-        newCoord.y >= 0 &&
-        newCoord.y < 10)
+    while (true)
         {
+        Position newPos = position;
+        switch (direction)
+            {
+            case Direction::North: newPos.y--; break;
+            case Direction::East:  newPos.x++; break;
+            case Direction::South: newPos.y++; break;
+            case Direction::West:  newPos.x--; break;
+        }
 
-        position = newCoord;
-        path.push_back(position);
+        if (newPos.x >= 0 && newPos.x < 10 && newPos.y >= 0 && newPos.y < 10)
+            {
+            position = newPos;
+            path.push_back(position);
+            break;
         }
-        else {
+        else
+            {
+            Direction newDir;
             do {
-                direction = static_cast<Direction>(
-                    (static_cast<int>(direction) % 4 + 1)
-                );
+                newDir = static_cast<Direction>(rand() % 4 + 1);
             }
-            while(isWayBlocked());
-            move();
+            while (isWayBlocked(newDir));
+            direction = newDir;
         }
+    }
 }
 
-bool Crawler::isWayBlocked() const {
-    return (direction == Direction::North &&
-            position.y == 0) ||
-           (direction == Direction::East  &&
-            position.x == 9) ||
-           (direction == Direction::South &&
-            position.y == 9) ||
-           (direction == Direction::West  &&
-            position.x == 0);
+bool Crawler::isWayBlocked() const
+{
+    return isWayBlocked(direction);
+}
+
+bool Crawler::isWayBlocked(Direction dir) const
+{
+    return (dir == Direction::North && position.y == 0) ||
+           (dir == Direction::East  && position.x == 9) ||
+           (dir == Direction::South && position.y == 9) ||
+           (dir == Direction::West  && position.x == 0);
 }
