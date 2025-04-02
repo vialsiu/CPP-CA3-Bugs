@@ -10,7 +10,7 @@ void Crawler::move() {
     while (true) {
         Position newPos = position;
         switch (direction)
-            {
+        {
             case Direction::North: newPos.y--; break;
             case Direction::East:  newPos.x++; break;
             case Direction::South: newPos.y++; break;
@@ -19,7 +19,7 @@ void Crawler::move() {
         }
 
         if (newPos.x >= 0 && newPos.x < 10 && newPos.y >= 0 && newPos.y < 10)
-            {
+        {
             position = newPos;
             path.push_back(position);
             break;
