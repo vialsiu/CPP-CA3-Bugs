@@ -1,16 +1,13 @@
 #include "Crawler.h"
 
-Crawler::Crawler(int id, int x, int y, Direction dir, int size) : id(id), position(x, y), direction(dir), size(size), alive(true)
-{
+Crawler::Crawler(int id, int x, int y, Direction dir, int size) : id(id), position(x, y), direction(dir), size(size), alive(true) {
     path.push_back(position);
 }
 
-void Crawler::move()
-{
+void Crawler::move() {
     if (!alive) return;
 
-    while (true)
-        {
+    while (true) {
         Position newPos = position;
         switch (direction)
             {
@@ -18,6 +15,7 @@ void Crawler::move()
             case Direction::East:  newPos.x++; break;
             case Direction::South: newPos.y++; break;
             case Direction::West:  newPos.x--; break;
+            default: return;
         }
 
         if (newPos.x >= 0 && newPos.x < 10 && newPos.y >= 0 && newPos.y < 10)
@@ -25,9 +23,7 @@ void Crawler::move()
             position = newPos;
             path.push_back(position);
             break;
-        }
-        else
-            {
+        } else {
             Direction newDir;
             do {
                 newDir = static_cast<Direction>(rand() % 4 + 1);

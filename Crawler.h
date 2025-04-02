@@ -8,15 +8,15 @@
 struct Position {
     int x;
     int y;
-    Position(int x = 0, int y = 0) : x(x), y(y){}
-    bool operator<(const Position& other) const
-    {
+    Position(int x = 0, int y = 0) : x(x), y(y) {}
+    bool operator<(const Position& other) const {
         if (x != other.x) return x < other.x;
         return y < other.y;
     }
 };
 
 enum class Direction {
+    None = 0,
     North = 1,
     East = 2,
     South = 3,
@@ -50,12 +50,10 @@ public:
     {
         return direction;
     }
-    int getSize() const
-    {
+    int getSize() const {
         return size;
     }
-    bool isAlive() const
-    {
+    bool isAlive() const {
         return alive;
     }
     const std::list<Position>& getPath() const
@@ -67,9 +65,8 @@ public:
     {
         this->alive = alive;
     }
-    void setSize(int size)
-    {
-        this->size = size;
+    void setSize(int newSize) {
+        size = newSize;
     }
     void setDirection(Direction dir)
     {
