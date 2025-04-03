@@ -31,6 +31,7 @@ private:
     int size;
     bool alive;
     std::list<Position> path;
+    int eatenById = -1;
 
 public:
     Crawler(int id, int x, int y, Direction dir, int size);
@@ -60,6 +61,10 @@ public:
     {
         return path;
     }
+    int getEatenBy() const
+    {
+        return eatenById;
+    }
 
     void setAlive(bool alive)
     {
@@ -72,6 +77,12 @@ public:
     {
         direction = dir;
     }
+
+    void setEatenBy(int id)
+    {
+        eatenById = id;
+    }
+
 };
 
 #endif // CRAWLER_H

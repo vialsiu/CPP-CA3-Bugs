@@ -112,8 +112,11 @@ void Board::findBugById(int id) const
         }
     }
 
+
+
     std::cout << "Bug " << id << " not found in the file.\n";
 }
+
 
 void Board::tapBoard()
 {
@@ -125,5 +128,80 @@ void Board::tapBoard()
         }
     }
 
+    for (int i = 0; i < crawlers.size(); ++i)
+    {
+        for (int j = i + 1; j < crawlers.size(); ++j)
+        {
+            if (crawlers[i]->isAlive() && crawlers[j]->isAlive() &&
+                crawlers[i]->getPosition().x == crawlers[j]->getPosition().x &&
+                crawlers[i]->getPosition().y == crawlers[j]->getPosition().y)
+            {
+                if (crawlers[i]->getSize() >= crawlers[j]->getSize())
+                {
+                    crawlers[i]->setSize(crawlers[i]->getSize() + crawlers[j]->getSize());
+                    crawlers[j]->setAlive(false);
+                    crawlers[j]->setEatenBy(crawlers[i]->getId());
+                }
+                else
+                {
+                    crawlers[j]->setSize(crawlers[j]->getSize() + crawlers[i]->getSize());
+                    crawlers[i]->setAlive(false);
+                    crawlers[i]->setEatenBy(crawlers[j]->getId());
+                }
+            }
+        }
+    }
+
     std::cout << "---Bug board has been tapped---\n";
-}  
+}
+
+
+
+void Board::displayLifeHistory() const
+{
+    std::cout << "\n---- Life History of All Bugs ----\n";
+
+    for (const auto* crawler : crawlers)
+    {
+        std::cout << crawler->getId() << " Crawler Path: ";
+        for (const auto& pos : crawler->getPath())
+        {
+            std::cout << "(" << pos.x << "," << pos.y << "),";
+        }
+        if (!crawler->isAlive())
+        {
+            std::cout << " Eaten by " << crawler->getEatenBy();
+        }
+        std::cout << std::endl;
+    }
+}
+
+void Board::writeLifeHistoryToFile() const
+{
+    std::ofstream file("bugs_life_history.out");
+    if (!file)
+    {
+        std::cout << "Error: Cannot write to file.\n";
+        return;
+    }
+
+    for (const auto* crawler : crawlers)
+    {
+        file << crawler->getId() << " Crawler Path: ";
+        for (const auto& pos : crawler->getPath())
+        {
+            file << "(" << pos.x << "," << pos.y << "),";
+        }
+        if (!crawler->isAlive())
+        {
+            file << " Eaten by " << crawler->getEatenBy();
+        }
+        file << "\n";
+    }
+
+    file.close();
+    std::cout << "Life history saved to 'bugs_life_history.out'\n";
+}
+
+
+

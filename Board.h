@@ -17,6 +17,10 @@ public:
     void displayAllBugs() const;
     void findBugById(int id) const;
     void tapBoard();
+    void displayLifeHistory() const;
+    void writeLifeHistoryToFile() const;
+
+
 };
 
 #endif // BOARD_H

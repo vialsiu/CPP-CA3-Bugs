@@ -11,7 +11,8 @@ int main() {
                   << "1. Display All Bugs\n"
                   << "2. Find a Bug\n"
                   << "3. Tap the Bug Board\n"
-                  << "4. Exit\n"
+                  << "4. Life History\n"
+                  << "5. Exit\n"
                   << "Enter your choice: ";
         std::cin >> choice;
 
@@ -30,10 +31,12 @@ int main() {
                 board.tapBoard();
             break;
             case 4:
-                std::cout << "Exiting...";
+                board.displayLifeHistory();
             break;
             case 5:
-                std::cout << "havent implemented";
+                std::cout << "Exiting...\n";
+                board.displayLifeHistory();
+                board.writeLifeHistoryToFile();
             break;
             case 6:
                 std::cout << "havent implemented";
@@ -47,7 +50,7 @@ int main() {
             default:
                 std::cout << "Invalid choice. Try again.\n";
         }
-    }  while (choice != 4);
+    }  while (choice != 5);
 
     return 0;
 }
