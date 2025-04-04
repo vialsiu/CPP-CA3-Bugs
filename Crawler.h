@@ -66,6 +66,10 @@ public:
         return eatenById;
     }
 
+    void setPosition(const Position& pos) {
+        position = pos;
+    }
+
     void setAlive(bool alive)
     {
         this->alive = alive;

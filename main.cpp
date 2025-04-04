@@ -1,4 +1,4 @@
- #include <iostream>
+#include <iostream>
 #include "Board.h"
 
 int main() {
@@ -12,7 +12,9 @@ int main() {
                   << "2. Find a Bug\n"
                   << "3. Tap the Bug Board\n"
                   << "4. Life History\n"
-                  << "5. Exit\n"
+                  << "5. Display All Cells\n"
+                  << "6. Run Simulation\n"
+                  << "7. Exit\n"
                   << "Enter your choice: ";
         std::cin >> choice;
 
@@ -34,23 +36,19 @@ int main() {
                 board.displayLifeHistory();
             break;
             case 5:
-                std::cout << "Exiting...\n";
-                board.displayLifeHistory();
-                board.writeLifeHistoryToFile();
+                board.displayAllCells();
             break;
             case 6:
-                std::cout << "havent implemented";
+                board.runSimulation();
             break;
             case 7:
-                std::cout << "havent implemented";
-            break;
-            case 8:
-                std::cout << "havent implemented";
+                std::cout << "Exiting...\n";
+            board.writeLifeHistoryToFile();
             break;
             default:
                 std::cout << "Invalid choice. Try again.\n";
         }
-    }  while (choice != 5);
+    } while (choice != 7 && !board.isGameOver());
 
     return 0;
 }

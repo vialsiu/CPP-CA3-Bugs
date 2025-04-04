@@ -10,6 +10,8 @@
 class Board {
 private:
     std::vector<Crawler*> crawlers;
+    bool gameOver = false;
+
 
 public:
     ~Board();
@@ -19,6 +21,12 @@ public:
     void tapBoard();
     void displayLifeHistory() const;
     void writeLifeHistoryToFile() const;
+    void displayAllCells() const;
+    bool isGameOver() const { return gameOver; }
+    void runSimulation();
+
+
+
 
 
 };
