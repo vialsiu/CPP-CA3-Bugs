@@ -1,13 +1,13 @@
- #include "Board.h"
+#include "Board.h"
 #include <fstream>
 #include <sstream>
 #include <windows.h>
 
 Board::~Board()
 {
-    for (auto* crawler : crawlers)
+    for (auto* bug : bugs)
     {
-        delete crawler;
+        delete bug;
     }
 }
 
@@ -43,9 +43,10 @@ void Board::loadBugsFromFile(const std::string& filename)
 
         if (type == 'C' && dir >= 1 && dir <= 4)
         {
-            crawlers.push_back(new Crawler(id, x, y, static_cast<Direction>(dir), size));
+            bugs.push_back(new Crawler(id, x, y, static_cast<Direction>(dir), size));
         }
     }
+
     file.close();
 }
 
@@ -60,13 +61,13 @@ void Board::displayAllBugs() const
 
     std::cout << "--------------------------------------------------\n";
 
-    for (const auto* crawler : crawlers)
+    for (const auto* bug : bugs)
     {
-        std::string status = crawler->isAlive() ? "Alive" : "Dead";
-        Position pos = crawler->getPosition();
+        std::string status = bug->isAlive() ? "Alive" : "Dead";
+        Position pos = bug->getPosition();
         std::string dirStr;
 
-        switch (crawler->getDirection())
+        switch (bug->getDirection())
         {
             case Direction::North: dirStr = "North"; break;
             case Direction::East:  dirStr = "East"; break;
@@ -75,10 +76,10 @@ void Board::displayAllBugs() const
             default: dirStr = "Unknown"; break;
         }
 
-        std::cout << std::left << std::setw(5) << crawler->getId()
+        std::cout << std::left << std::setw(5) << bug->getId()
                   << std::setw(10) << "Crawler"
                   << std::setw(10) << ("(" + std::to_string(pos.x) + "," + std::to_string(pos.y) + ")")
-                  << std::setw(6) << crawler->getSize()
+                  << std::setw(6) << bug->getSize()
                   << std::setw(12) << dirStr
                   << std::setw(6) << status << std::endl;
     }
@@ -88,17 +89,17 @@ void Board::displayAllBugs() const
 
 void Board::findBugById(int id) const
 {
-    for (const auto* crawler : crawlers)
+    for (const auto* bug : bugs)
     {
-        if (crawler->getId() == id)
+        if (bug->getId() == id)
         {
             std::cout << "\n----Bug " << id << " stats----\n";
-            std::cout << "ID: " << crawler->getId() << "\n";
-            std::cout << "Position: (" << crawler->getPosition().x << ", " << crawler->getPosition().y << ")\n";
-            std::cout << "Size: " << crawler->getSize() << "\n";
+            std::cout << "ID: " << bug->getId() << "\n";
+            std::cout << "Position: (" << bug->getPosition().x << ", " << bug->getPosition().y << ")\n";
+            std::cout << "Size: " << bug->getSize() << "\n";
 
             std::string dirStr;
-            switch (crawler->getDirection())
+            switch (bug->getDirection())
             {
                 case Direction::North: dirStr = "North"; break;
                 case Direction::East:  dirStr = "East"; break;
@@ -108,86 +109,93 @@ void Board::findBugById(int id) const
             }
 
             std::cout << "Direction: " << dirStr << "\n";
-            std::cout << "Status: " << (crawler->isAlive() ? "Alive" : "Dead") << "\n";
+            std::cout << "Status: " << (bug->isAlive() ? "Alive" : "Dead") << "\n";
             return;
         }
     }
 
-
-
     std::cout << "Bug " << id << " not found in the file.\n";
 }
 
-
-
-
-void Board::tapBoard() {
+void Board::tapBoard()
+{
     static int tapCount = 0;
     tapCount++;
     std::cout << "\nTap #" << tapCount << "\n";
 
-
-
-        for (auto* crawler : crawlers) {
-            if (crawler->isAlive()) {
-                crawler->move();
-            }
-        }
-
-
-
-    std::vector<Crawler*> aliveBugs;
-    for (auto* crawler : crawlers) {
-        if (crawler->isAlive()) {
-            aliveBugs.push_back(crawler);
+    for (auto* bug : bugs)
+    {
+        if (bug->isAlive())
+        {
+            bug->move();
         }
     }
 
+    std::vector<Bug*> aliveBugs;
+    for (auto* bug : bugs)
+    {
+        if (bug->isAlive())
+        {
+            aliveBugs.push_back(bug);
+        }
+    }
 
-    if (tapCount >= 20 && aliveBugs.size() > 1) {
+    if (tapCount >= 20 && aliveBugs.size() > 1)
+    {
         std::cout << "\nMAX TAPS REACHED - FORCING FINAL PVP!\n";
-        for (auto* crawler : aliveBugs) {
-            crawler->setPosition({0, 0});
+        for (auto* bug : aliveBugs)
+        {
+            bug->setPosition({0, 0});
         }
     }
 
-
-    for (int x = 0; x < 10; ++x) {
-        for (int y = 0; y < 10; ++y) {
-            std::vector<Crawler*> bugsInCell;
-            for (auto* crawler : crawlers) {
-                if (crawler->isAlive() &&
-                    crawler->getPosition().x == x &&
-                    crawler->getPosition().y == y) {
-                    bugsInCell.push_back(crawler);
+    for (int x = 0; x < 10; ++x)
+    {
+        for (int y = 0; y < 10; ++y)
+        {
+            std::vector<Bug*> bugsInCell;
+            for (auto* bug : bugs)
+            {
+                if (bug->isAlive() &&
+                    bug->getPosition().x == x &&
+                    bug->getPosition().y == y)
+                {
+                    bugsInCell.push_back(bug);
                 }
             }
 
             if (bugsInCell.size() <= 1) continue;
 
             int maxSize = 0;
-            for (auto* bug : bugsInCell) {
+            for (auto* bug : bugsInCell)
+            {
                 if (bug->getSize() > maxSize)
                     maxSize = bug->getSize();
             }
 
-            std::vector<Crawler*> candidates;
-            for (auto* bug : bugsInCell) {
+            std::vector<Bug*> candidates;
+            for (auto* bug : bugsInCell)
+            {
                 if (bug->getSize() == maxSize)
                     candidates.push_back(bug);
             }
 
-            Crawler* winner;
-            if (candidates.size() == 1) {
+            Bug* winner;
+            if (candidates.size() == 1)
+            {
                 winner = candidates[0];
-            } else {
+            }
+            else
+            {
                 int randomIndex = std::rand() % static_cast<int>(candidates.size());
                 winner = candidates[randomIndex];
             }
 
             int totalSizeGained = 0;
-            for (auto* bug : bugsInCell) {
-                if (bug != winner) {
+            for (auto* bug : bugsInCell)
+            {
+                if (bug != winner)
+                {
                     bug->setAlive(false);
                     bug->setEatenBy(winner->getId());
                     totalSizeGained += bug->getSize();
@@ -200,39 +208,35 @@ void Board::tapBoard() {
 
     std::cout << "---Bug board has been tapped---\n";
 
-
     aliveBugs.clear();
-    for (auto* crawler : crawlers) {
-        if (crawler->isAlive())
-            aliveBugs.push_back(crawler);
+    for (auto* bug : bugs)
+    {
+        if (bug->isAlive())
+            aliveBugs.push_back(bug);
     }
 
-    if (aliveBugs.size() == 1) {
-        std::cout << "\nLAST BUG STANDING: Crawler " << aliveBugs[0]->getId() << "\n";
+    if (aliveBugs.size() == 1)
+    {
+        std::cout << "\nLAST BUG STANDING: Bug " << aliveBugs[0]->getId() << "\n";
         writeLifeHistoryToFile();
         gameOver = true;
     }
 }
 
-
-
-
-
-
 void Board::displayLifeHistory() const
 {
     std::cout << "\n---- Life History of All Bugs ----\n";
 
-    for (const auto* crawler : crawlers)
+    for (const auto* bug : bugs)
     {
-        std::cout << crawler->getId() << " Crawler Path: ";
-        for (const auto& pos : crawler->getPath())
+        std::cout << bug->getId() << " Crawler Path: ";
+        for (const auto& pos : bug->getPath())
         {
             std::cout << "(" << pos.x << "," << pos.y << "),";
         }
-        if (!crawler->isAlive())
+        if (!bug->isAlive())
         {
-            std::cout << " Eaten by " << crawler->getEatenBy();
+            std::cout << " Eaten by " << bug->getEatenBy();
         }
         std::cout << std::endl;
     }
@@ -247,16 +251,16 @@ void Board::writeLifeHistoryToFile() const
         return;
     }
 
-    for (const auto* crawler : crawlers)
+    for (const auto* bug : bugs)
     {
-        file << crawler->getId() << " Crawler Path: ";
-        for (const auto& pos : crawler->getPath())
+        file << bug->getId() << " Crawler Path: ";
+        for (const auto& pos : bug->getPath())
         {
             file << "(" << pos.x << "," << pos.y << "),";
         }
-        if (!crawler->isAlive())
+        if (!bug->isAlive())
         {
-            file << " Eaten by " << crawler->getEatenBy();
+            file << " Eaten by " << bug->getEatenBy();
         }
         file << "\n";
     }
@@ -269,23 +273,21 @@ void Board::displayAllCells() const
 {
     std::cout << "\n---- Board Cell Occupancy ----\n";
 
-
     for (int y = 0; y < 10; ++y)
     {
         for (int x = 0; x < 10; ++x)
         {
             std::cout << "(" << x << "," << y << "): ";
 
-
             bool found = false;
-            for (const auto* crawler : crawlers)
+            for (const auto* bug : bugs)
             {
-                if (crawler->isAlive() &&
-                    crawler->getPosition().x == x &&
-                    crawler->getPosition().y == y)
+                if (bug->isAlive() &&
+                    bug->getPosition().x == x &&
+                    bug->getPosition().y == y)
                 {
                     if (found) std::cout << ", ";
-                    std::cout << "Crawler " << crawler->getId();
+                    std::cout << "Bug " << bug->getId();
                     found = true;
                 }
             }
@@ -298,16 +300,19 @@ void Board::displayAllCells() const
     }
 }
 
-void Board::runSimulation() {
+void Board::runSimulation()
+{
     int tapCount = 0;
 
-    while (!gameOver) {
+    while (!gameOver)
+    {
         tapCount++;
         std::cout << "\n[Simulation Tap #" << tapCount << "]\n";
 
         int aliveCount = 0;
-        for (const auto* crawler : crawlers) {
-            if (crawler->isAlive()) aliveCount++;
+        for (const auto* bug : bugs)
+        {
+            if (bug->isAlive()) aliveCount++;
         }
 
         std::cout << "Alive Bugs: " << aliveCount << "\n";
@@ -318,9 +323,3 @@ void Board::runSimulation() {
 
     std::cout << "\nSimulation finished.\n";
 }
-
-
-
-
-
-
