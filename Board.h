@@ -1,6 +1,7 @@
 #ifndef BOARD_H
 #define BOARD_H
 
+#include "Bug.h"
 #include "Crawler.h"
 #include <vector>
 #include <string>
@@ -9,9 +10,8 @@
 
 class Board {
 private:
-    std::vector<Crawler*> crawlers;
+    std::vector<Bug*> bugs;
     bool gameOver = false;
-
 
 public:
     ~Board();
@@ -24,11 +24,6 @@ public:
     void displayAllCells() const;
     bool isGameOver() const { return gameOver; }
     void runSimulation();
-
-
-
-
-
 };
 
-#endif // BOARD_H
+#endif

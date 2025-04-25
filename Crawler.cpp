@@ -1,7 +1,8 @@
 #include "Crawler.h"
 
-Crawler::Crawler(int id, int x, int y, Direction dir, int size) : id(id), position(x, y), direction(dir), size(size), alive(true) {
-    path.push_back(position);
+Crawler::Crawler(int id, int x, int y, Direction dir, int size)
+    : Bug(id, x, y, dir, size) {
+
 }
 
 void Crawler::move() {
@@ -21,28 +22,15 @@ void Crawler::move() {
         if (newPos.x >= 0 && newPos.x < 10 && newPos.y >= 0 && newPos.y < 10)
         {
             position = newPos;
-            path.push_back(position);
+            addToPath(position);
             break;
-        } else {
+        }
+        else {
             Direction newDir;
             do {
                 newDir = static_cast<Direction>(rand() % 4 + 1);
-            }
-            while (isWayBlocked(newDir));
+            } while (isWayBlocked(newDir));
             direction = newDir;
         }
     }
-}
-
-bool Crawler::isWayBlocked() const
-{
-    return isWayBlocked(direction);
-}
-
-bool Crawler::isWayBlocked(Direction dir) const
-{
-    return (dir == Direction::North && position.y == 0) ||
-           (dir == Direction::East  && position.x == 9) ||
-           (dir == Direction::South && position.y == 9) ||
-           (dir == Direction::West  && position.x == 0);
 }

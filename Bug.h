@@ -97,4 +97,4 @@ protected:
     }
 };
 
-#endif // BUG_H
+#endif
