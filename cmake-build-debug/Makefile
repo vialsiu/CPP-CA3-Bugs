@@ -56,10 +56,10 @@ RM = "C:\Users\elias\AppData\Local\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bi
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\elias\CLionProjects\CPP-CA3-Bugs-lastgit
+CMAKE_SOURCE_DIR = C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\elias\CLionProjects\CPP-CA3-Bugs-lastgit\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\elias\CLionProjects\CPP-CA3-Bugs-lastgit\cmake-build-debug\CMakeFiles C:\Users\elias\CLionProjects\CPP-CA3-Bugs-lastgit\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\cmake-build-debug\CMakeFiles C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\elias\CLionProjects\CPP-CA3-Bugs-lastgit\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -176,6 +176,30 @@ Crawler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BugsLife.dir\build.make CMakeFiles/BugsLife.dir/Crawler.cpp.s
 .PHONY : Crawler.cpp.s
 
+Hopper.obj: Hopper.cpp.obj
+.PHONY : Hopper.obj
+
+# target to build an object file
+Hopper.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BugsLife.dir\build.make CMakeFiles/BugsLife.dir/Hopper.cpp.obj
+.PHONY : Hopper.cpp.obj
+
+Hopper.i: Hopper.cpp.i
+.PHONY : Hopper.i
+
+# target to preprocess a source file
+Hopper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BugsLife.dir\build.make CMakeFiles/BugsLife.dir/Hopper.cpp.i
+.PHONY : Hopper.cpp.i
+
+Hopper.s: Hopper.cpp.s
+.PHONY : Hopper.s
+
+# target to generate assembly for a file
+Hopper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BugsLife.dir\build.make CMakeFiles/BugsLife.dir/Hopper.cpp.s
+.PHONY : Hopper.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -215,6 +239,9 @@ help:
 	@echo ... Crawler.obj
 	@echo ... Crawler.i
 	@echo ... Crawler.s
+	@echo ... Hopper.obj
+	@echo ... Hopper.i
+	@echo ... Hopper.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

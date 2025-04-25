@@ -2,6 +2,9 @@
 #include <fstream>
 #include <sstream>
 #include <windows.h>
+#include "Bug.h"
+#include "Crawler.h"
+#include "Hopper.h"
 
 Board::~Board()
 {
@@ -45,6 +48,12 @@ void Board::loadBugsFromFile(const std::string& filename)
         {
             bugs.push_back(new Crawler(id, x, y, static_cast<Direction>(dir), size));
         }
+        else if (type == 'H' && dir >= 1 && dir <= 4)
+        {
+            std::getline(ss, token, ',');
+            int hopLen = std::stoi(token);
+            bugs.push_back(new Hopper(id, x, y, static_cast<Direction>(dir), size, hopLen));
+        }
     }
 
     file.close();
@@ -66,6 +75,7 @@ void Board::displayAllBugs() const
         std::string status = bug->isAlive() ? "Alive" : "Dead";
         Position pos = bug->getPosition();
         std::string dirStr;
+        std::string typeStr = dynamic_cast<const Hopper*>(bug) ? "Hopper" : "Crawler";
 
         switch (bug->getDirection())
         {
@@ -77,7 +87,7 @@ void Board::displayAllBugs() const
         }
 
         std::cout << std::left << std::setw(5) << bug->getId()
-                  << std::setw(10) << "Crawler"
+                  << std::setw(10) << typeStr
                   << std::setw(10) << ("(" + std::to_string(pos.x) + "," + std::to_string(pos.y) + ")")
                   << std::setw(6) << bug->getSize()
                   << std::setw(12) << dirStr
@@ -229,15 +239,19 @@ void Board::displayLifeHistory() const
 
     for (const auto* bug : bugs)
     {
-        std::cout << bug->getId() << " Crawler Path: ";
+        std::string typeStr = dynamic_cast<const Hopper*>(bug) ? "Hopper" : "Crawler";
+        std::cout << bug->getId() << " " << typeStr << " Path: ";
+
         for (const auto& pos : bug->getPath())
         {
             std::cout << "(" << pos.x << "," << pos.y << "),";
         }
+
         if (!bug->isAlive())
         {
             std::cout << " Eaten by " << bug->getEatenBy();
         }
+
         std::cout << std::endl;
     }
 }
@@ -253,15 +267,19 @@ void Board::writeLifeHistoryToFile() const
 
     for (const auto* bug : bugs)
     {
-        file << bug->getId() << " Crawler Path: ";
+        std::string typeStr = dynamic_cast<const Hopper*>(bug) ? "Hopper" : "Crawler";
+        file << bug->getId() << " " << typeStr << " Path: ";
+
         for (const auto& pos : bug->getPath())
         {
             file << "(" << pos.x << "," << pos.y << "),";
         }
+
         if (!bug->isAlive())
         {
             file << " Eaten by " << bug->getEatenBy();
         }
+
         file << "\n";
     }
 

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/elias/CLionProjects/CPP-CA3-Bugs-lastgit
+# Install script for directory: C:/Users/elias/CLionProjects/Arza_Iker_CA3-Stage-1_Bugs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -52,6 +52,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "C:/Users/elias/CLionProjects/CPP-CA3-Bugs-lastgit/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/elias/CLionProjects/Arza_Iker_CA3-Stage-1_Bugs/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

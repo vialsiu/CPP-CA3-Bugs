@@ -1,5 +1,5 @@
 CMakeFiles/BugsLife.dir/main.cpp.obj: \
- C:\Users\elias\CLionProjects\CPP-CA3-Bugs-lastgit\main.cpp \
+ C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\main.cpp \
  C:/Users/elias/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Users/elias/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Users/elias/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -150,8 +150,8 @@ CMakeFiles/BugsLife.dir/main.cpp.obj: \
  C:/Users/elias/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
  C:/Users/elias/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
  C:/Users/elias/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
- C:\Users\elias\CLionProjects\CPP-CA3-Bugs-lastgit\Board.h \
- C:\Users\elias\CLionProjects\CPP-CA3-Bugs-lastgit\Crawler.h \
+ C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\Board.h \
+ C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\Crawler.h \
  C:/Users/elias/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/list \
  C:/Users/elias/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_list.h \
  C:/Users/elias/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocated_ptr.h \

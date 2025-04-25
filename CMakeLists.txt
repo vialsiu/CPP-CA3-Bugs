@@ -7,4 +7,8 @@ add_executable(BugsLife main.cpp
         Crawler.cpp
         Crawler.h
         Board.cpp
-        Board.h)
+        Board.h
+        Bug.h
+        Hopper.h
+        Hopper.cpp
+        Position.h)

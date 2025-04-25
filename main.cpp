@@ -3,7 +3,7 @@
 
 int main() {
     Board board;
-    board.loadBugsFromFile("crawler-bugs.txt");
+    board.loadBugsFromFile("all-bugs.txt");
 
     int choice;
     do {
