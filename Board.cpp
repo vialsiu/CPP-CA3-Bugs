@@ -9,9 +9,7 @@
 Board::~Board()
 {
     for (auto* bug : bugs)
-    {
         delete bug;
-    }
 }
 
 void Board::loadBugsFromFile(const std::string& filename)
@@ -33,26 +31,21 @@ void Board::loadBugsFromFile(const std::string& filename)
 
         std::getline(ss, token, ',');
         type = token[0];
-        std::getline(ss, token, ',');
-        id = std::stoi(token);
-        std::getline(ss, token, ',');
-        x = std::stoi(token);
-        std::getline(ss, token, ',');
-        y = std::stoi(token);
-        std::getline(ss, token, ',');
-        dir = std::stoi(token);
-        std::getline(ss, token, ',');
-        size = std::stoi(token);
+        std::getline(ss, token, ','); id = std::stoi(token);
+        std::getline(ss, token, ','); x = std::stoi(token);
+        std::getline(ss, token, ','); y = std::stoi(token);
+        std::getline(ss, token, ','); dir = std::stoi(token);
+        std::getline(ss, token, ','); size = std::stoi(token);
 
-        if (type == 'C' && dir >= 1 && dir <= 4)
+        if (type == 'C')
         {
             bugs.push_back(new Crawler(id, x, y, static_cast<Direction>(dir), size));
         }
-        else if (type == 'H' && dir >= 1 && dir <= 4)
+        else if (type == 'H')
         {
             std::getline(ss, token, ',');
-            int hopLen = std::stoi(token);
-            bugs.push_back(new Hopper(id, x, y, static_cast<Direction>(dir), size, hopLen));
+            int hopLength = std::stoi(token);
+            bugs.push_back(new Hopper(id, x, y, static_cast<Direction>(dir), size, hopLength));
         }
     }
 
@@ -73,9 +66,10 @@ void Board::displayAllBugs() const
     for (const auto* bug : bugs)
     {
         std::string status = bug->isAlive() ? "Alive" : "Dead";
+        std::string typeStr = dynamic_cast<const Hopper*>(bug) ? "Hopper" : "Crawler";
+
         Position pos = bug->getPosition();
         std::string dirStr;
-        std::string typeStr = dynamic_cast<const Hopper*>(bug) ? "Hopper" : "Crawler";
 
         switch (bug->getDirection())
         {
@@ -91,7 +85,7 @@ void Board::displayAllBugs() const
                   << std::setw(10) << ("(" + std::to_string(pos.x) + "," + std::to_string(pos.y) + ")")
                   << std::setw(6) << bug->getSize()
                   << std::setw(12) << dirStr
-                  << std::setw(6) << status << std::endl;
+                  << std::setw(6) << status << "\n";
     }
 
     std::cout << "--------------------------------------------------\n";
@@ -133,32 +127,6 @@ void Board::tapBoard()
     tapCount++;
     std::cout << "\nTap #" << tapCount << "\n";
 
-    for (auto* bug : bugs)
-    {
-        if (bug->isAlive())
-        {
-            bug->move();
-        }
-    }
-
-    std::vector<Bug*> aliveBugs;
-    for (auto* bug : bugs)
-    {
-        if (bug->isAlive())
-        {
-            aliveBugs.push_back(bug);
-        }
-    }
-
-    if (tapCount >= 20 && aliveBugs.size() > 1)
-    {
-        std::cout << "\nMAX TAPS REACHED - FORCING FINAL PVP!\n";
-        for (auto* bug : aliveBugs)
-        {
-            bug->setPosition({0, 0});
-        }
-    }
-
     for (int x = 0; x < 10; ++x)
     {
         for (int y = 0; y < 10; ++y)
@@ -178,28 +146,17 @@ void Board::tapBoard()
 
             int maxSize = 0;
             for (auto* bug : bugsInCell)
-            {
                 if (bug->getSize() > maxSize)
                     maxSize = bug->getSize();
-            }
 
             std::vector<Bug*> candidates;
             for (auto* bug : bugsInCell)
-            {
                 if (bug->getSize() == maxSize)
                     candidates.push_back(bug);
-            }
 
-            Bug* winner;
-            if (candidates.size() == 1)
-            {
-                winner = candidates[0];
-            }
-            else
-            {
-                int randomIndex = std::rand() % static_cast<int>(candidates.size());
-                winner = candidates[randomIndex];
-            }
+            Bug* winner = (candidates.size() == 1)
+                          ? candidates[0]
+                          : candidates[rand() % candidates.size()];
 
             int totalSizeGained = 0;
             for (auto* bug : bugsInCell)
@@ -216,14 +173,28 @@ void Board::tapBoard()
         }
     }
 
+    for (auto* bug : bugs)
+        if (bug->isAlive())
+            bug->move();
+
+    std::vector<Bug*> aliveBugs;
+    for (auto* bug : bugs)
+        if (bug->isAlive())
+            aliveBugs.push_back(bug);
+
+    if (tapCount >= 20 && aliveBugs.size() > 1)
+    {
+        std::cout << "\nMAX TAPS REACHED - FORCING FINAL PVP!\n";
+        for (auto* bug : aliveBugs)
+            bug->setPosition({0, 0});
+    }
+
     std::cout << "---Bug board has been tapped---\n";
 
     aliveBugs.clear();
     for (auto* bug : bugs)
-    {
         if (bug->isAlive())
             aliveBugs.push_back(bug);
-    }
 
     if (aliveBugs.size() == 1)
     {
@@ -233,6 +204,7 @@ void Board::tapBoard()
     }
 }
 
+
 void Board::displayLifeHistory() const
 {
     std::cout << "\n---- Life History of All Bugs ----\n";
@@ -241,18 +213,13 @@ void Board::displayLifeHistory() const
     {
         std::string typeStr = dynamic_cast<const Hopper*>(bug) ? "Hopper" : "Crawler";
         std::cout << bug->getId() << " " << typeStr << " Path: ";
-
         for (const auto& pos : bug->getPath())
-        {
             std::cout << "(" << pos.x << "," << pos.y << "),";
-        }
 
         if (!bug->isAlive())
-        {
             std::cout << " Eaten by " << bug->getEatenBy();
-        }
 
-        std::cout << std::endl;
+        std::cout << "\n";
     }
 }
 
@@ -269,16 +236,11 @@ void Board::writeLifeHistoryToFile() const
     {
         std::string typeStr = dynamic_cast<const Hopper*>(bug) ? "Hopper" : "Crawler";
         file << bug->getId() << " " << typeStr << " Path: ";
-
         for (const auto& pos : bug->getPath())
-        {
             file << "(" << pos.x << "," << pos.y << "),";
-        }
 
         if (!bug->isAlive())
-        {
             file << " Eaten by " << bug->getEatenBy();
-        }
 
         file << "\n";
     }
@@ -297,23 +259,32 @@ void Board::displayAllCells() const
         {
             std::cout << "(" << x << "," << y << "): ";
 
-            bool found = false;
+            std::vector<std::string> occupants;
             for (const auto* bug : bugs)
             {
                 if (bug->isAlive() &&
                     bug->getPosition().x == x &&
                     bug->getPosition().y == y)
                 {
-                    if (found) std::cout << ", ";
-                    std::cout << "Bug " << bug->getId();
-                    found = true;
+                    std::string typeStr = dynamic_cast<const Hopper*>(bug) ? "Hopper" : "Crawler";
+                    occupants.push_back(typeStr + " " + std::to_string(bug->getId()));
                 }
             }
 
-            if (!found)
-                std::cout << "empty";
-
-            std::cout << "\n";
+            if (occupants.empty())
+            {
+                std::cout << "empty\n";
+            }
+            else
+            {
+                for (size_t i = 0; i < occupants.size(); ++i)
+                {
+                    std::cout << occupants[i];
+                    if (i < occupants.size() - 1)
+                        std::cout << ", ";
+                }
+                std::cout << "\n";
+            }
         }
     }
 }
@@ -321,17 +292,13 @@ void Board::displayAllCells() const
 void Board::runSimulation()
 {
     int tapCount = 0;
-
     while (!gameOver)
     {
-        tapCount++;
-        std::cout << "\n[Simulation Tap #" << tapCount << "]\n";
+        std::cout << "\n[Simulation Tap #" << ++tapCount << "]\n";
 
         int aliveCount = 0;
         for (const auto* bug : bugs)
-        {
             if (bug->isAlive()) aliveCount++;
-        }
 
         std::cout << "Alive Bugs: " << aliveCount << "\n";
 

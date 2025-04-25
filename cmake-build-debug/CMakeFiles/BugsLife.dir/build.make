@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Users\elias\AppData\Local\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Users\fedan\AppData\Local\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Users\elias\AppData\Local\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Users\fedan\AppData\Local\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs
+CMAKE_SOURCE_DIR = C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/BugsLife.dir/depend.make
@@ -69,60 +69,60 @@ include CMakeFiles/BugsLife.dir/progress.make
 include CMakeFiles/BugsLife.dir/flags.make
 
 CMakeFiles/BugsLife.dir/main.cpp.obj: CMakeFiles/BugsLife.dir/flags.make
-CMakeFiles/BugsLife.dir/main.cpp.obj: C:/Users/elias/CLionProjects/Arza_Iker_CA3-Stage-1_Bugs/main.cpp
+CMakeFiles/BugsLife.dir/main.cpp.obj: C:/Users/fedan/CLionProjects/CPP-CA3-Bugs-Zip/CPP-CA3/main.cpp
 CMakeFiles/BugsLife.dir/main.cpp.obj: CMakeFiles/BugsLife.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BugsLife.dir/main.cpp.obj"
-	C:\Users\elias\AppData\Local\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BugsLife.dir/main.cpp.obj -MF CMakeFiles\BugsLife.dir\main.cpp.obj.d -o CMakeFiles\BugsLife.dir\main.cpp.obj -c C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BugsLife.dir/main.cpp.obj"
+	"C:\Users\fedan\AppData\Local\JETBRA~1\CLion 2024.3.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BugsLife.dir/main.cpp.obj -MF CMakeFiles\BugsLife.dir\main.cpp.obj.d -o CMakeFiles\BugsLife.dir\main.cpp.obj -c C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\main.cpp
 
 CMakeFiles/BugsLife.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BugsLife.dir/main.cpp.i"
-	C:\Users\elias\AppData\Local\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\main.cpp > CMakeFiles\BugsLife.dir\main.cpp.i
+	"C:\Users\fedan\AppData\Local\JETBRA~1\CLion 2024.3.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\main.cpp > CMakeFiles\BugsLife.dir\main.cpp.i
 
 CMakeFiles/BugsLife.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BugsLife.dir/main.cpp.s"
-	C:\Users\elias\AppData\Local\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\main.cpp -o CMakeFiles\BugsLife.dir\main.cpp.s
+	"C:\Users\fedan\AppData\Local\JETBRA~1\CLion 2024.3.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\main.cpp -o CMakeFiles\BugsLife.dir\main.cpp.s
 
 CMakeFiles/BugsLife.dir/Crawler.cpp.obj: CMakeFiles/BugsLife.dir/flags.make
-CMakeFiles/BugsLife.dir/Crawler.cpp.obj: C:/Users/elias/CLionProjects/Arza_Iker_CA3-Stage-1_Bugs/Crawler.cpp
+CMakeFiles/BugsLife.dir/Crawler.cpp.obj: C:/Users/fedan/CLionProjects/CPP-CA3-Bugs-Zip/CPP-CA3/Crawler.cpp
 CMakeFiles/BugsLife.dir/Crawler.cpp.obj: CMakeFiles/BugsLife.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BugsLife.dir/Crawler.cpp.obj"
-	C:\Users\elias\AppData\Local\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BugsLife.dir/Crawler.cpp.obj -MF CMakeFiles\BugsLife.dir\Crawler.cpp.obj.d -o CMakeFiles\BugsLife.dir\Crawler.cpp.obj -c C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\Crawler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BugsLife.dir/Crawler.cpp.obj"
+	"C:\Users\fedan\AppData\Local\JETBRA~1\CLion 2024.3.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BugsLife.dir/Crawler.cpp.obj -MF CMakeFiles\BugsLife.dir\Crawler.cpp.obj.d -o CMakeFiles\BugsLife.dir\Crawler.cpp.obj -c C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\Crawler.cpp
 
 CMakeFiles/BugsLife.dir/Crawler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BugsLife.dir/Crawler.cpp.i"
-	C:\Users\elias\AppData\Local\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\Crawler.cpp > CMakeFiles\BugsLife.dir\Crawler.cpp.i
+	"C:\Users\fedan\AppData\Local\JETBRA~1\CLion 2024.3.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\Crawler.cpp > CMakeFiles\BugsLife.dir\Crawler.cpp.i
 
 CMakeFiles/BugsLife.dir/Crawler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BugsLife.dir/Crawler.cpp.s"
-	C:\Users\elias\AppData\Local\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\Crawler.cpp -o CMakeFiles\BugsLife.dir\Crawler.cpp.s
+	"C:\Users\fedan\AppData\Local\JETBRA~1\CLion 2024.3.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\Crawler.cpp -o CMakeFiles\BugsLife.dir\Crawler.cpp.s
 
 CMakeFiles/BugsLife.dir/Board.cpp.obj: CMakeFiles/BugsLife.dir/flags.make
-CMakeFiles/BugsLife.dir/Board.cpp.obj: C:/Users/elias/CLionProjects/Arza_Iker_CA3-Stage-1_Bugs/Board.cpp
+CMakeFiles/BugsLife.dir/Board.cpp.obj: C:/Users/fedan/CLionProjects/CPP-CA3-Bugs-Zip/CPP-CA3/Board.cpp
 CMakeFiles/BugsLife.dir/Board.cpp.obj: CMakeFiles/BugsLife.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BugsLife.dir/Board.cpp.obj"
-	C:\Users\elias\AppData\Local\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BugsLife.dir/Board.cpp.obj -MF CMakeFiles\BugsLife.dir\Board.cpp.obj.d -o CMakeFiles\BugsLife.dir\Board.cpp.obj -c C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\Board.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BugsLife.dir/Board.cpp.obj"
+	"C:\Users\fedan\AppData\Local\JETBRA~1\CLion 2024.3.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BugsLife.dir/Board.cpp.obj -MF CMakeFiles\BugsLife.dir\Board.cpp.obj.d -o CMakeFiles\BugsLife.dir\Board.cpp.obj -c C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\Board.cpp
 
 CMakeFiles/BugsLife.dir/Board.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BugsLife.dir/Board.cpp.i"
-	C:\Users\elias\AppData\Local\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\Board.cpp > CMakeFiles\BugsLife.dir\Board.cpp.i
+	"C:\Users\fedan\AppData\Local\JETBRA~1\CLion 2024.3.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\Board.cpp > CMakeFiles\BugsLife.dir\Board.cpp.i
 
 CMakeFiles/BugsLife.dir/Board.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BugsLife.dir/Board.cpp.s"
-	C:\Users\elias\AppData\Local\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\Board.cpp -o CMakeFiles\BugsLife.dir\Board.cpp.s
+	"C:\Users\fedan\AppData\Local\JETBRA~1\CLion 2024.3.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\Board.cpp -o CMakeFiles\BugsLife.dir\Board.cpp.s
 
 CMakeFiles/BugsLife.dir/Hopper.cpp.obj: CMakeFiles/BugsLife.dir/flags.make
-CMakeFiles/BugsLife.dir/Hopper.cpp.obj: C:/Users/elias/CLionProjects/Arza_Iker_CA3-Stage-1_Bugs/Hopper.cpp
+CMakeFiles/BugsLife.dir/Hopper.cpp.obj: C:/Users/fedan/CLionProjects/CPP-CA3-Bugs-Zip/CPP-CA3/Hopper.cpp
 CMakeFiles/BugsLife.dir/Hopper.cpp.obj: CMakeFiles/BugsLife.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BugsLife.dir/Hopper.cpp.obj"
-	C:\Users\elias\AppData\Local\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BugsLife.dir/Hopper.cpp.obj -MF CMakeFiles\BugsLife.dir\Hopper.cpp.obj.d -o CMakeFiles\BugsLife.dir\Hopper.cpp.obj -c C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\Hopper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BugsLife.dir/Hopper.cpp.obj"
+	"C:\Users\fedan\AppData\Local\JETBRA~1\CLion 2024.3.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BugsLife.dir/Hopper.cpp.obj -MF CMakeFiles\BugsLife.dir\Hopper.cpp.obj.d -o CMakeFiles\BugsLife.dir\Hopper.cpp.obj -c C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\Hopper.cpp
 
 CMakeFiles/BugsLife.dir/Hopper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BugsLife.dir/Hopper.cpp.i"
-	C:\Users\elias\AppData\Local\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\Hopper.cpp > CMakeFiles\BugsLife.dir\Hopper.cpp.i
+	"C:\Users\fedan\AppData\Local\JETBRA~1\CLion 2024.3.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\Hopper.cpp > CMakeFiles\BugsLife.dir\Hopper.cpp.i
 
 CMakeFiles/BugsLife.dir/Hopper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BugsLife.dir/Hopper.cpp.s"
-	C:\Users\elias\AppData\Local\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\Hopper.cpp -o CMakeFiles\BugsLife.dir\Hopper.cpp.s
+	"C:\Users\fedan\AppData\Local\JETBRA~1\CLion 2024.3.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\Hopper.cpp -o CMakeFiles\BugsLife.dir\Hopper.cpp.s
 
 # Object files for target BugsLife
 BugsLife_OBJECTS = \
@@ -142,7 +142,7 @@ BugsLife.exe: CMakeFiles/BugsLife.dir/build.make
 BugsLife.exe: CMakeFiles/BugsLife.dir/linkLibs.rsp
 BugsLife.exe: CMakeFiles/BugsLife.dir/objects1.rsp
 BugsLife.exe: CMakeFiles/BugsLife.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable BugsLife.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable BugsLife.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\BugsLife.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -154,6 +154,6 @@ CMakeFiles/BugsLife.dir/clean:
 .PHONY : CMakeFiles/BugsLife.dir/clean
 
 CMakeFiles/BugsLife.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\cmake-build-debug C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\cmake-build-debug C:\Users\elias\CLionProjects\Arza_Iker_CA3-Stage-1_Bugs\cmake-build-debug\CMakeFiles\BugsLife.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3 C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3 C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\cmake-build-debug C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\cmake-build-debug C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\cmake-build-debug\CMakeFiles\BugsLife.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/BugsLife.dir/depend
 
