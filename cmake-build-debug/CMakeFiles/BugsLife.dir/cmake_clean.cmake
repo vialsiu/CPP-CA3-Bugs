@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/BugsLife.dir/Crawler.cpp.obj.d"
   "CMakeFiles/BugsLife.dir/Hopper.cpp.obj"
   "CMakeFiles/BugsLife.dir/Hopper.cpp.obj.d"
+  "CMakeFiles/BugsLife.dir/KnightBug.cpp.obj"
+  "CMakeFiles/BugsLife.dir/KnightBug.cpp.obj.d"
   "CMakeFiles/BugsLife.dir/main.cpp.obj"
   "CMakeFiles/BugsLife.dir/main.cpp.obj.d"
   "libBugsLife.dll.a"

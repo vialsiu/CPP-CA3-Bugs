@@ -200,6 +200,30 @@ Hopper.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BugsLife.dir\build.make CMakeFiles/BugsLife.dir/Hopper.cpp.s
 .PHONY : Hopper.cpp.s
 
+KnightBug.obj: KnightBug.cpp.obj
+.PHONY : KnightBug.obj
+
+# target to build an object file
+KnightBug.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BugsLife.dir\build.make CMakeFiles/BugsLife.dir/KnightBug.cpp.obj
+.PHONY : KnightBug.cpp.obj
+
+KnightBug.i: KnightBug.cpp.i
+.PHONY : KnightBug.i
+
+# target to preprocess a source file
+KnightBug.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BugsLife.dir\build.make CMakeFiles/BugsLife.dir/KnightBug.cpp.i
+.PHONY : KnightBug.cpp.i
+
+KnightBug.s: KnightBug.cpp.s
+.PHONY : KnightBug.s
+
+# target to generate assembly for a file
+KnightBug.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BugsLife.dir\build.make CMakeFiles/BugsLife.dir/KnightBug.cpp.s
+.PHONY : KnightBug.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -242,6 +266,9 @@ help:
 	@echo ... Hopper.obj
 	@echo ... Hopper.i
 	@echo ... Hopper.s
+	@echo ... KnightBug.obj
+	@echo ... KnightBug.i
+	@echo ... KnightBug.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

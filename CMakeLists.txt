@@ -11,4 +11,7 @@ add_executable(BugsLife main.cpp
         Bug.h
         Hopper.h
         Hopper.cpp
-        Position.h)
+        Position.h
+        KnightBug.cpp
+        KnightBug.h
+)

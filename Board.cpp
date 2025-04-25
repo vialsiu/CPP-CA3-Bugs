@@ -5,6 +5,8 @@
 #include "Bug.h"
 #include "Crawler.h"
 #include "Hopper.h"
+#include "KnightBug.h"
+
 
 Board::~Board()
 {
@@ -47,6 +49,11 @@ void Board::loadBugsFromFile(const std::string& filename)
             int hopLength = std::stoi(token);
             bugs.push_back(new Hopper(id, x, y, static_cast<Direction>(dir), size, hopLength));
         }
+        else if (type == 'K')
+        {
+            bugs.push_back(new KnightBug(id, x, y, static_cast<Direction>(dir), size));
+        }
+
     }
 
     file.close();
@@ -66,7 +73,17 @@ void Board::displayAllBugs() const
     for (const auto* bug : bugs)
     {
         std::string status = bug->isAlive() ? "Alive" : "Dead";
-        std::string typeStr = dynamic_cast<const Hopper*>(bug) ? "Hopper" : "Crawler";
+
+        std::string typeStr;
+        if (dynamic_cast<const Hopper*>(bug))
+            typeStr = "Hopper";
+        else if (dynamic_cast<const Crawler*>(bug))
+            typeStr = "Crawler";
+        else if (dynamic_cast<const KnightBug*>(bug))
+            typeStr = "KnightBug";
+        else
+            typeStr = "Unknown";
+
 
         Position pos = bug->getPosition();
         std::string dirStr;

@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/fedan/CLionProjects/CPP-CA3-Bugs-Zip/CPP-CA3/Board.cpp" "CMakeFiles/BugsLife.dir/Board.cpp.obj" "gcc" "CMakeFiles/BugsLife.dir/Board.cpp.obj.d"
   "C:/Users/fedan/CLionProjects/CPP-CA3-Bugs-Zip/CPP-CA3/Crawler.cpp" "CMakeFiles/BugsLife.dir/Crawler.cpp.obj" "gcc" "CMakeFiles/BugsLife.dir/Crawler.cpp.obj.d"
   "C:/Users/fedan/CLionProjects/CPP-CA3-Bugs-Zip/CPP-CA3/Hopper.cpp" "CMakeFiles/BugsLife.dir/Hopper.cpp.obj" "gcc" "CMakeFiles/BugsLife.dir/Hopper.cpp.obj.d"
+  "C:/Users/fedan/CLionProjects/CPP-CA3-Bugs-Zip/CPP-CA3/KnightBug.cpp" "CMakeFiles/BugsLife.dir/KnightBug.cpp.obj" "gcc" "CMakeFiles/BugsLife.dir/KnightBug.cpp.obj.d"
   "C:/Users/fedan/CLionProjects/CPP-CA3-Bugs-Zip/CPP-CA3/main.cpp" "CMakeFiles/BugsLife.dir/main.cpp.obj" "gcc" "CMakeFiles/BugsLife.dir/main.cpp.obj.d"
   )
 

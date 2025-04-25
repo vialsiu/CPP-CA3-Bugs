@@ -425,4 +425,5 @@ CMakeFiles/BugsLife.dir/Board.cpp.obj: \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/winsvc.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/mcx.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/imm.h \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\Hopper.h
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\Hopper.h \
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\KnightBug.h
