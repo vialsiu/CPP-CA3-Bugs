@@ -154,9 +154,20 @@ void Board::tapBoard()
                 if (bug->getSize() == maxSize)
                     candidates.push_back(bug);
 
-            Bug* winner = (candidates.size() == 1)
-                          ? candidates[0]
-                          : candidates[rand() % candidates.size()];
+            Bug* winner = nullptr;
+
+            if (candidates.size() == 1) {
+                winner = candidates[0];
+            } else {
+                std::cout << "Tie at (" << x << "," << y << ") between Bugs: ";
+                for (auto* b : candidates)
+                    std::cout << b->getId() << " ";
+                std::cout << "-> Random winner chosen: ";
+
+                winner = candidates[rand() % candidates.size()];
+                std::cout << "BUG " << winner->getId() << ".\n";
+            }
+
 
             int totalSizeGained = 0;
             for (auto* bug : bugsInCell)
@@ -168,6 +179,23 @@ void Board::tapBoard()
                     totalSizeGained += bug->getSize();
                 }
             }
+
+            std::cout << "Bug " << winner->getId() << " eats: ";
+            bool ateSomeone = false;
+            for (auto* bug : bugsInCell)
+            {
+                if (bug != winner)
+                {
+                    std::cout << bug->getId() << " ";
+                    ateSomeone = true;
+                }
+            }
+            if (ateSomeone)
+            {
+                int originalSize = winner->getSize();
+                std::cout << "-> It suddenly grew from size " << originalSize << " to " << (originalSize + totalSizeGained) << "!\n";
+            }
+
 
             winner->setSize(winner->getSize() + totalSizeGained);
         }
