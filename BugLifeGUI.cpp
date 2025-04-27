@@ -136,6 +136,18 @@ Board runBugLifeGUI() {
         window.draw(superBug);
 
         window.display();
+
+        bool anyOtherAlive = false;
+        for (const auto* bug : board.getBugs()) {
+            if (bug->isAlive()) {
+                anyOtherAlive = true;
+                break;
+            }
+        }
+        if (!anyOtherAlive) {
+            std::cout << "\nSuperBug has defeated all bugs! He is the winner!\n";
+            window.close();
+        }
     }
 
     return board;
