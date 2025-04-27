@@ -7,7 +7,6 @@
 #include "Hopper.h"
 #include "KnightBug.h"
 
-
 Board::~Board()
 {
     for (auto* bug : bugs)
@@ -53,7 +52,6 @@ void Board::loadBugsFromFile(const std::string& filename)
         {
             bugs.push_back(new KnightBug(id, x, y, static_cast<Direction>(dir), size));
         }
-
     }
 
     file.close();
@@ -73,13 +71,10 @@ void Board::displayAllBugs() const
     for (const auto* bug : bugs)
     {
         std::string status = bug->isAlive() ? "Alive" : "Dead";
-
         std::string typeStr = bug->getType();
-
-
         Position pos = bug->getPosition();
-        std::string dirStr;
 
+        std::string dirStr;
         switch (bug->getDirection())
         {
             case Direction::North: dirStr = "North"; break;
@@ -222,6 +217,13 @@ void Board::tapBoard(bool checkGameOver)
             aliveBugs.push_back(bug);
     }
 
+    if (aliveBugs.size() == 2) {
+        std::cout << "\nONLY TWO BUGS LEFT - FORCING FINAL FIGHT!\n";
+        for (auto* bug : aliveBugs) {
+            bug->setPosition({0, 0});
+        }
+    }
+
     if (checkGameOver)
     {
         if (aliveBugs.size() == 1)
@@ -235,10 +237,10 @@ void Board::tapBoard(bool checkGameOver)
     std::cout << "---Bug board has been tapped---\n";
 }
 
-void Board::tapBoard() {
+void Board::tapBoard()
+{
     tapBoard(true);
 }
-
 
 void Board::displayLifeHistory() const
 {
