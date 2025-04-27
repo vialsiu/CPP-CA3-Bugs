@@ -1,5 +1,5 @@
 CMakeFiles/BugsLife.dir/main.cpp.obj: \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\main.cpp \
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\main.cpp \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -150,15 +150,15 @@ CMakeFiles/BugsLife.dir/main.cpp.obj: \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\Board.h \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\Bug.h \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\Position.h \
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\Board.h \
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\Bug.h \
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\Position.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/list \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_list.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocated_ptr.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/aligned_buffer.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/list.tcc \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\Crawler.h \
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\Crawler.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/vector \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_uninitialized.h \
@@ -176,4 +176,4 @@ CMakeFiles/BugsLife.dir/main.cpp.obj: \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\BugLifeGUI.h
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\BugLifeGUI.h

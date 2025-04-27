@@ -116,7 +116,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/fedan/AppData/Local/JetBrains/CLion 2024.3.2/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake"
   "C:/Users/fedan/AppData/Local/JetBrains/CLion 2024.3.2/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake"
   "C:/Users/fedan/AppData/Local/JetBrains/CLion 2024.3.2/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake"
-  "C:/Users/fedan/CLionProjects/CPP-CA3-Bugs-Final/CPP-CA3-Bugs-Final/CMakeLists.txt"
+  "C:/Users/fedan/CLionProjects/CPP-CA3-Bugs-testtest/CMakeLists.txt"
   "CMakeFiles/3.30.5/CMakeCCompiler.cmake"
   "CMakeFiles/3.30.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.30.5/CMakeRCCompiler.cmake"

@@ -144,7 +144,6 @@ void Board::tapBoard(bool checkGameOver)
     tapCount++;
     std::cout << "\nTap #" << tapCount << "\n";
 
-    // Step 1: Handle battles on the board
     for (int x = 0; x < 10; ++x)
     {
         for (int y = 0; y < 10; ++y)
@@ -218,14 +217,12 @@ void Board::tapBoard(bool checkGameOver)
         }
     }
 
-    // Step 2: Move all alive bugs according to their move pattern
     for (auto* bug : bugs)
     {
         if (bug->isAlive())
             bug->move();
     }
 
-    // Step 3: Check for game over (only if requested)
     std::vector<Bug*> aliveBugs;
     for (auto* bug : bugs)
     {
@@ -246,9 +243,8 @@ void Board::tapBoard(bool checkGameOver)
     std::cout << "---Bug board has been tapped---\n";
 }
 
-// This small version keeps the compatibility with old calls
 void Board::tapBoard() {
-    tapBoard(true); // Default tap that checks for game over
+    tapBoard(true);
 }
 
 

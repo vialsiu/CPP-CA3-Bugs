@@ -1,8 +1,8 @@
 CMakeFiles/BugsLife.dir/Hopper.cpp.obj: \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\Hopper.cpp \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\Hopper.h \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\Bug.h \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\Position.h \
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\Hopper.cpp \
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\Hopper.h \
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\Bug.h \
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\Position.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/list \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -66,9 +66,40 @@ CMakeFiles/BugsLife.dir/Hopper.cpp.obj: \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_base.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/max_size_type.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numbers \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/char_traits.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/postypes.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwchar \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_stat64.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/localefwd.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/clocale \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/locale.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cctype \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/ctype.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream_insert.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_forced.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_function.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/binders.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/refwrap.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string_view \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functional_hash.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hash_bytes.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/string_view.tcc \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdlib \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
- C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/limits.h \
@@ -78,6 +109,10 @@ CMakeFiles/BugsLife.dir/Hopper.cpp.obj: \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/errno.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_abs.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdio \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/charconv.h \
+ C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/time.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/x86_64-w64-mingw32/include/sys/timeb.h \

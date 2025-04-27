@@ -88,9 +88,9 @@ Board runBugLifeGUI() {
             if (!bug->isAlive()) continue;
 
             sf::Sprite sprite;
-            if (dynamic_cast<const Crawler*>(bug)) sprite.setTexture(crawlerTexture);
-            else if (dynamic_cast<const Hopper*>(bug)) sprite.setTexture(hopperTexture);
-            else if (dynamic_cast<const KnightBug*>(bug)) sprite.setTexture(knightTexture);
+            if (bug->getType() == "Crawler") sprite.setTexture(crawlerTexture);
+            else if (bug->getType() == "Hopper") sprite.setTexture(hopperTexture);
+            else if (bug->getType() == "KnightBug") sprite.setTexture(knightTexture);
 
             sprite.setScale(
                 static_cast<float>(cellSize) / sprite.getTexture()->getSize().x * 0.8f,
@@ -112,12 +112,12 @@ Board runBugLifeGUI() {
                     y * cellSize + (cellSize - sprite.getGlobalBounds().height) / 2
                 );
             } else {
-                if (dynamic_cast<const Crawler*>(bug)) {
+                if (bug->getType() == "Crawler") {
                     sprite.setPosition(
                         x * cellSize + 5,
                         y * cellSize + 5
                     );
-                } else if (dynamic_cast<const Hopper*>(bug)) {
+                } else if (bug->getType() == "Hopper") {
                     sprite.setPosition(
                         x * cellSize + cellSize / 2,
                         y * cellSize + cellSize / 2

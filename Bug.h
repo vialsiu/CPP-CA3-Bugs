@@ -3,6 +3,8 @@
 
 #include "Position.h"
 #include <list>
+#include <string>
+
 
 enum class Direction {
     None = 0,
@@ -22,6 +24,7 @@ protected:
     int eatenById = -1;
     std::list<Position> path;
 
+
 public:
     Bug(int id, int x, int y, Direction dir, int size)
         : id(id), position(x, y), direction(dir), size(size), alive(true) {
@@ -31,6 +34,9 @@ public:
     virtual ~Bug() {}
 
     virtual void move() = 0;
+
+    virtual std::string getType() const = 0;
+
 
     int getId() const {
         return id;

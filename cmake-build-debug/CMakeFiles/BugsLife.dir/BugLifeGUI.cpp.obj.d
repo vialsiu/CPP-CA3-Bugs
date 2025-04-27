@@ -1,5 +1,5 @@
 CMakeFiles/BugsLife.dir/BugLifeGUI.cpp.obj: \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\BugLifeGUI.cpp \
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\BugLifeGUI.cpp \
  C:/SFML-2.6.2-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.2/include/SFML/Graphics.hpp \
  C:/SFML-2.6.2-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.2/include/SFML/Window.hpp \
  C:/SFML-2.6.2-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.2/include/SFML/System.hpp \
@@ -257,14 +257,14 @@ CMakeFiles/BugsLife.dir/BugLifeGUI.cpp.obj: \
  C:/SFML-2.6.2-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.2/include/SFML/Graphics/Sprite.hpp \
  C:/SFML-2.6.2-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.2/include/SFML/Graphics/Text.hpp \
  C:/SFML-2.6.2-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.2/include/SFML/Graphics/VertexBuffer.hpp \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\Board.h \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\Bug.h \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\Position.h \
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\Board.h \
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\Bug.h \
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\Position.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/list \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_list.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocated_ptr.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/list.tcc \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\Crawler.h \
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\Crawler.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
@@ -272,5 +272,5 @@ CMakeFiles/BugsLife.dir/BugLifeGUI.cpp.obj: \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream \
  C:/Users/fedan/AppData/Local/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\Hopper.h \
- C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Final\CPP-CA3-Bugs-Final\KnightBug.h
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\Hopper.h \
+ C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-testtest\KnightBug.h
