@@ -1,3 +1,3 @@
-C:/Users/fedan/CLionProjects/CPP-CA3-Bugs-Zip/CPP-CA3/cmake-build-debug/CMakeFiles/BugsLife.dir
-C:/Users/fedan/CLionProjects/CPP-CA3-Bugs-Zip/CPP-CA3/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/fedan/CLionProjects/CPP-CA3-Bugs-Zip/CPP-CA3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/elias/CLionProjects/CPP-CA3-Bugs-Final/cmake-build-debug/CMakeFiles/BugsLife.dir
+C:/Users/elias/CLionProjects/CPP-CA3-Bugs-Final/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/elias/CLionProjects/CPP-CA3-Bugs-Final/cmake-build-debug/CMakeFiles/rebuild_cache.dir

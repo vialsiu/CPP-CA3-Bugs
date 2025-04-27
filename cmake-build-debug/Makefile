@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Users\fedan\AppData\Local\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Users\elias\AppData\Local\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Users\fedan\AppData\Local\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Users\elias\AppData\Local\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3
+CMAKE_SOURCE_DIR = C:\Users\elias\CLionProjects\CPP-CA3-Bugs-Final
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\elias\CLionProjects\CPP-CA3-Bugs-Final\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\cmake-b
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	"C:\Users\fedan\AppData\Local\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Users\elias\AppData\Local\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	"C:\Users\fedan\AppData\Local\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Users\elias\AppData\Local\JetBrains\CLion 2024.3.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\cmake-build-debug\CMakeFiles C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\elias\CLionProjects\CPP-CA3-Bugs-Final\cmake-build-debug\CMakeFiles C:\Users\elias\CLionProjects\CPP-CA3-Bugs-Final\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\fedan\CLionProjects\CPP-CA3-Bugs-Zip\CPP-CA3\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\elias\CLionProjects\CPP-CA3-Bugs-Final\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -151,6 +151,30 @@ Board.s: Board.cpp.s
 Board.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BugsLife.dir\build.make CMakeFiles/BugsLife.dir/Board.cpp.s
 .PHONY : Board.cpp.s
+
+BugLifeGUI.obj: BugLifeGUI.cpp.obj
+.PHONY : BugLifeGUI.obj
+
+# target to build an object file
+BugLifeGUI.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BugsLife.dir\build.make CMakeFiles/BugsLife.dir/BugLifeGUI.cpp.obj
+.PHONY : BugLifeGUI.cpp.obj
+
+BugLifeGUI.i: BugLifeGUI.cpp.i
+.PHONY : BugLifeGUI.i
+
+# target to preprocess a source file
+BugLifeGUI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BugsLife.dir\build.make CMakeFiles/BugsLife.dir/BugLifeGUI.cpp.i
+.PHONY : BugLifeGUI.cpp.i
+
+BugLifeGUI.s: BugLifeGUI.cpp.s
+.PHONY : BugLifeGUI.s
+
+# target to generate assembly for a file
+BugLifeGUI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BugsLife.dir\build.make CMakeFiles/BugsLife.dir/BugLifeGUI.cpp.s
+.PHONY : BugLifeGUI.cpp.s
 
 Crawler.obj: Crawler.cpp.obj
 .PHONY : Crawler.obj
@@ -260,6 +284,9 @@ help:
 	@echo ... Board.obj
 	@echo ... Board.i
 	@echo ... Board.s
+	@echo ... BugLifeGUI.obj
+	@echo ... BugLifeGUI.i
+	@echo ... BugLifeGUI.s
 	@echo ... Crawler.obj
 	@echo ... Crawler.i
 	@echo ... Crawler.s

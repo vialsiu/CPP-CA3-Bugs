@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "BugsLife.pdb"
   "CMakeFiles/BugsLife.dir/Board.cpp.obj"
   "CMakeFiles/BugsLife.dir/Board.cpp.obj.d"
+  "CMakeFiles/BugsLife.dir/BugLifeGUI.cpp.obj"
+  "CMakeFiles/BugsLife.dir/BugLifeGUI.cpp.obj.d"
   "CMakeFiles/BugsLife.dir/Crawler.cpp.obj"
   "CMakeFiles/BugsLife.dir/Crawler.cpp.obj.d"
   "CMakeFiles/BugsLife.dir/Hopper.cpp.obj"

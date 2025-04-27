@@ -24,6 +24,7 @@ public:
     void displayAllCells() const;
     bool isGameOver() const { return gameOver; }
     void runSimulation();
+    const std::vector<Bug*>& getBugs() const { return bugs; }
 };
 
 #endif
