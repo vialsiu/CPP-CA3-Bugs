@@ -1,4 +1,20 @@
+#include "BugLifeGUI.h"
+
+int main() {
+    runBugLifeGUI();
+    return 0;
+}
+
+
+
+
+
+
+/*
+
 #include <iostream>
+
+
 #include "Board.h"
 
 int main() {
@@ -52,3 +68,4 @@ int main() {
 
     return 0;
 }
+*/
