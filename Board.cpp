@@ -74,15 +74,7 @@ void Board::displayAllBugs() const
     {
         std::string status = bug->isAlive() ? "Alive" : "Dead";
 
-        std::string typeStr;
-        if (dynamic_cast<const Hopper*>(bug))
-            typeStr = "Hopper";
-        else if (dynamic_cast<const Crawler*>(bug))
-            typeStr = "Crawler";
-        else if (dynamic_cast<const KnightBug*>(bug))
-            typeStr = "KnightBug";
-        else
-            typeStr = "Unknown";
+        std::string typeStr = bug->getType();
 
 
         Position pos = bug->getPosition();
@@ -254,7 +246,7 @@ void Board::displayLifeHistory() const
 
     for (const auto* bug : bugs)
     {
-        std::string typeStr = dynamic_cast<const Hopper*>(bug) ? "Hopper" : "Crawler";
+        std::string typeStr = bug->getType();
         std::cout << bug->getId() << " " << typeStr << " Path: ";
         for (const auto& pos : bug->getPath())
             std::cout << "(" << pos.x << "," << pos.y << "),";
@@ -277,7 +269,7 @@ void Board::writeLifeHistoryToFile() const
 
     for (const auto* bug : bugs)
     {
-        std::string typeStr = dynamic_cast<const Hopper*>(bug) ? "Hopper" : "Crawler";
+        std::string typeStr = bug->getType();
         file << bug->getId() << " " << typeStr << " Path: ";
         for (const auto& pos : bug->getPath())
             file << "(" << pos.x << "," << pos.y << "),";
@@ -294,7 +286,7 @@ void Board::writeLifeHistoryToFile() const
 
 void Board::displayAllCells() const
 {
-    std::cout << "\n---- Board Cell Occupancy ----\n";
+    std::cout << "\n---- Board Cells ----\n";
 
     for (int y = 0; y < 10; ++y)
     {
@@ -309,7 +301,7 @@ void Board::displayAllCells() const
                     bug->getPosition().x == x &&
                     bug->getPosition().y == y)
                 {
-                    std::string typeStr = dynamic_cast<const Hopper*>(bug) ? "Hopper" : "Crawler";
+                    std::string typeStr = bug->getType();
                     occupants.push_back(typeStr + " " + std::to_string(bug->getId()));
                 }
             }
