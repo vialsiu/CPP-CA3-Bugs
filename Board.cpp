@@ -138,12 +138,13 @@ void Board::findBugById(int id) const
     std::cout << "Bug " << id << " not found in the file.\n";
 }
 
-void Board::tapBoard()
+void Board::tapBoard(bool checkGameOver)
 {
     static int tapCount = 0;
     tapCount++;
     std::cout << "\nTap #" << tapCount << "\n";
 
+    // Step 1: Handle battles on the board
     for (int x = 0; x < 10; ++x)
     {
         for (int y = 0; y < 10; ++y)
@@ -159,7 +160,8 @@ void Board::tapBoard()
                 }
             }
 
-            if (bugsInCell.size() <= 1) continue;
+            if (bugsInCell.size() <= 1)
+                continue;
 
             int maxSize = 0;
             for (auto* bug : bugsInCell)
@@ -172,10 +174,9 @@ void Board::tapBoard()
                     candidates.push_back(bug);
 
             Bug* winner = nullptr;
-
-            if (candidates.size() == 1) {
+            if (candidates.size() == 1)
                 winner = candidates[0];
-            } else {
+            else {
                 std::cout << "Tie at (" << x << "," << y << ") between Bugs: ";
                 for (auto* b : candidates)
                     std::cout << b->getId() << " ";
@@ -184,7 +185,6 @@ void Board::tapBoard()
                 winner = candidates[rand() % candidates.size()];
                 std::cout << "BUG " << winner->getId() << ".\n";
             }
-
 
             int totalSizeGained = 0;
             for (auto* bug : bugsInCell)
@@ -210,43 +210,45 @@ void Board::tapBoard()
             if (ateSomeone)
             {
                 int originalSize = winner->getSize();
-                std::cout << "-> It suddenly grew from size " << originalSize << " to " << (originalSize + totalSizeGained) << "!\n";
+                std::cout << "-> It suddenly grew from size " << originalSize
+                          << " to " << (originalSize + totalSizeGained) << "!\n";
             }
-
 
             winner->setSize(winner->getSize() + totalSizeGained);
         }
     }
 
+    // Step 2: Move all alive bugs according to their move pattern
     for (auto* bug : bugs)
+    {
         if (bug->isAlive())
             bug->move();
+    }
 
+    // Step 3: Check for game over (only if requested)
     std::vector<Bug*> aliveBugs;
     for (auto* bug : bugs)
+    {
         if (bug->isAlive())
             aliveBugs.push_back(bug);
+    }
 
-    if (tapCount >= 20 && aliveBugs.size() > 1)
+    if (checkGameOver)
     {
-        std::cout << "\nMAX TAPS REACHED - FORCING FINAL PVP!\n";
-        for (auto* bug : aliveBugs)
-            bug->setPosition({0, 0});
+        if (aliveBugs.size() == 1)
+        {
+            std::cout << "\nLAST BUG STANDING: Bug " << aliveBugs[0]->getId() << "\n";
+            writeLifeHistoryToFile();
+            gameOver = true;
+        }
     }
 
     std::cout << "---Bug board has been tapped---\n";
+}
 
-    aliveBugs.clear();
-    for (auto* bug : bugs)
-        if (bug->isAlive())
-            aliveBugs.push_back(bug);
-
-    if (aliveBugs.size() == 1)
-    {
-        std::cout << "\nLAST BUG STANDING: Bug " << aliveBugs[0]->getId() << "\n";
-        writeLifeHistoryToFile();
-        gameOver = true;
-    }
+// This small version keeps the compatibility with old calls
+void Board::tapBoard() {
+    tapBoard(true); // Default tap that checks for game over
 }
 
 
